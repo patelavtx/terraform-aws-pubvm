@@ -1,14 +1,3 @@
-# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami
-
-data "aws_ami" "ubuntu_20_04_lts" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-  owners = ["self"]
-}
 
 data "http" "ip" {
   url = "https://ifconfig.me"
