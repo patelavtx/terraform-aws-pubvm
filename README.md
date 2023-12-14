@@ -1,4 +1,4 @@
-# terraform-aws-aws-linux-vm-public
+# terraform-aws-pubvm
 
 Spin up test linux VM  (wiht basic apache and iperf3)
 
