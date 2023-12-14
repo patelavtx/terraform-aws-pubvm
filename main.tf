@@ -115,7 +115,7 @@ resource "aws_network_interface" "pubvm" {
 
 resource "aws_eip" "pubvm" {
   count = var.use_eip ? 1 : 0
-  domain = vpc
+  domain = "vpc"
 
   instance = aws_instance.pubvm.id
   tags     = local.tags
