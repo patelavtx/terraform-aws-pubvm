@@ -1,3 +1,8 @@
+
+/* find data ami owner 
+(1) sudo aws ec2 describe-images --filters Name=name,Values=ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*
+*/
+
 data "aws_ami" "ubuntu_20_04_lts" {
   most_recent = true
 
