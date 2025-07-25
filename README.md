@@ -7,6 +7,8 @@ Spin up test linux VM  (wiht basic apache and iperf3)
 2. Allow incoming Web (HTTP) and default iperf3 port
 3. Allow ping from RFC1918 (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16)
 4. Require providers block in root module
+5. Update 'data block' to use 'ipv4.icanhazip.com' + chomp to address issues when deploying vm
+
 
 e.g.
 

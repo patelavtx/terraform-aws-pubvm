@@ -14,10 +14,9 @@ data "aws_ami" "ubuntu_20_04_lts" {
 }
 
 
-data "http" "ip" {
-  url = "https://ifconfig.me"
+data "http" "myip" {
+  url = "http://ipv4.icanhazip.com"
 }
-
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group
 
@@ -31,8 +30,8 @@ resource "aws_security_group" "pubvm" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["${data.http.ip.response_body}/32"]
-  }
+    cidr_blocks = ["${chomp(data.http.myip.response_body)}/32"]
+}
 
   ingress {
     description = "ICMP10"
